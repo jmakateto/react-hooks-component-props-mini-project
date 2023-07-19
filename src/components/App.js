@@ -1,15 +1,21 @@
 import React from "react";
-import blogData from "../data/blog";
+import Header from './Header';
+import About from './About';
+import ArticleList from './ArticleList';
 
-console.log(blogData);
+const App = () => {
+  const blogName = "Your Blog Name";
+  const imageUrl = "https://via.placeholder.com/215";
+  const aboutText = "This is your blog's about section.";
 
-function App() {
   return (
-    <div className="App">
-      You're on your own from here! Follow the deliverables; test things out in
-      the browser as you write your code; and good luck!
+    <div>
+      <Header blogName={blogName} />
+      <About imageUrl={imageUrl} aboutText={aboutText} />
+      <ArticleList />
     </div>
   );
-}
+};
+
 
 export default App;
